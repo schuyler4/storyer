@@ -1,0 +1,7 @@
+<ul class="collection">
+  <%= for story <- @storys do %>
+    <li class="collection-item">
+      <%= story.title %>
+    </li>
+  <% end %>
+</ul>
