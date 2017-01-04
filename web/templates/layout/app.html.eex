@@ -20,6 +20,11 @@
       <nav>
         <div class="nav-wrapper">
           <a href="/" class="brand-logo center">Storyer</a>
+          <ul class="right">
+            <li>
+              <%= link "Sign In With Google", to: auth_path(@conn, :request, "google") %>
+            </li>
+          </ul>
         </div>
       </nav>
 

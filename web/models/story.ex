@@ -5,6 +5,7 @@ defmodule Storyer.Story do
     field :title, :string
     field :content, :string
     field :rating, :integer, default: 0
+    field :active, :boolean, default: true
 
     timestamps()
   end

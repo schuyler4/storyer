@@ -25,3 +25,12 @@ config :logger, :console,
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
+
+config :ueberauth, Ueberauth, providers: [
+  google: {Ueberauth.Strategy.Google, []}
+]
+
+config  :ueberauth, Ueberauth.Strategy.Google.OAuth,
+  client_id: "364812653137-b360pu5grjgnps0caueapmus49g9urjo.apps.googleusercontent.com",
+  client_secret: "tDaacmGtdkrbgnHvCgYnC15T",
+  redirect_url: "http://localhost:4000"

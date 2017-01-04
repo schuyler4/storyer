@@ -1,0 +1,8 @@
+<%= form_for @changeset, story_path(@conn, :update, @story), fn f -> %>
+  <div class="form-group">
+    <%= text_input f, :title, placeholder: "Title", class: "form-controll" %>
+    <%= textarea f, :content, placeholder: "Content", class: "materialize-textarea" %>
+    <%= error_tag f, :title %>
+  </div>
+  <%= submit "Save Story", class: "btn btn-primary" %>
+<% end %>
